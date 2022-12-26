@@ -76,28 +76,31 @@
       width: unset;
       overflow: scroll;
       margin: 0 0;
-      border-radius: 2rem;
-      padding: 0 0;
+      border-radius: 1.2rem;
+      padding: 1rem 0.6rem;
       box-shadow: 1vw 1vw 3.8vw 1.4vw lighten($background, 10%);
 
       .transaction {
         width: 100%;
-        margin: 0 0 3rem 0;
+        margin: 0 0 1rem 0;
         padding: 1rem;
         font-size: 1rem;
-        border-bottom: 0.2rem solid $text-color;
+        border-bottom: 0.1px solid $text-color;
 
         .transaction-date {
-          margin-left: -5rem;
+          margin-left: -18rem;
+          font-size: 0.8rem;
+          margin-bottom: -1rem;
         }
 
         .transaction-amount {
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
 
         .transaction-type {
-          padding: 0 0;
+          padding: 0.1rem 0.6rem;
           border-radius: 2rem;
+          font-size: 0.8rem;
 
           .trans-index {
             margin-right: 0.4rem;

@@ -1,19 +1,27 @@
 .balance-details {
-  padding: 3vw;
+  padding: 1vw;
+  width: 95vw;
+  margin: 1vw auto;
+  overflow: hidden;
   @include flexCenter(row);
 
   .details {
-    padding: 3vw;
+    padding: 2vw;
     border-radius: 2vw;
-
+    
     .balance-text {
-      font-size: 4.7vw;
+      font-size: 4.2vw;
       margin-bottom: 1vw;
+    }
+
+    .balance-date {
+      font-size: 2vw;
     }
   }
 
   .balance {
-    font-size: 5vw;
+    font-size: 4.4vw;
     margin-bottom: 4.6vw;
+    
   }
 }

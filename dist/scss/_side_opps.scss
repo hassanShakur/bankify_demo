@@ -1,0 +1,70 @@
+.side-operations {
+  width: 90vw;
+  margin: 4vw auto;
+  color: darken($text-color, 100%);
+
+  article {
+    height: fit-content;
+    margin: 4vh 4vw;
+    background: blue;
+    padding: 5vw 6vw 8vw 6vw;
+    border-radius: 2.4vw;
+
+    form {
+      @include flexCenter(column);
+      align-items: flex-start;
+
+      input {
+        margin-bottom: 1vw;
+      }
+
+      button {
+        background: transparent;
+        border: none;
+        padding: 1.2vw 1.8vw;
+        border-radius: 1vw;
+        align-self: flex-end;
+
+        &:hover {
+          transform: translateY(2px);
+          box-shadow: 3px 3px 2px -1px rgba(0, 0, 0, 0.6);
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+        }
+
+        i {
+          font-size: 4vw;
+          color: darken($text-color, 100%);
+
+          &:hover {
+            color: darken($text-color, 90%);
+          }
+        }
+      }
+    }
+  }
+
+  .transfer {
+    background-image: linear-gradient(to bottom right, #ffb003, #ffcb03);
+
+    button {
+      background: #ffb003;
+    }
+  }
+
+  .request-loan {
+    background-image: linear-gradient(to bottom right, #39b385, #9be15d);
+
+    button {
+      background: #39b385;
+    }
+  }
+
+  .close-acc {
+    background-image: linear-gradient(to bottom right, #e52a5a, #ff585f);
+
+    button {
+      background: #e52a5a;
+    }
+  }
+}

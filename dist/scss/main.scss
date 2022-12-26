@@ -2,6 +2,7 @@
 @import './nav';
 @import './balance';
 @import './transactions';
+@import './side_opps';
 
 body {
   background-color: $background;
@@ -15,13 +16,14 @@ body {
 
 input {
   text-transform: capitalize;
-  font-size: 0.9rem;
-  padding: 0.6em;
-  border-radius: 0.4em;
+  font-size: 2.2vw;
+  padding: 1.4vw;
+  border-radius: 1vw;
   border: 1px solid transparent;
-  margin-top: 1.2rem;
+  background: lighten($background, 84%);
+  margin-top: 3vw;
 
-  &:hover,
+  
   &:focus {
     outline: none;
     border: 1px solid aquamarine;

@@ -19,7 +19,7 @@
       margin: 0 0 1rem 0;
       @include flexCenter(row);
       padding: 0.6rem;
-      font-size: .7rem;
+      font-size: 0.7rem;
       border-bottom: 1px solid $text-color;
 
       .transaction-date {
@@ -28,8 +28,24 @@
 
       .transaction-amount {
         font-size: 1.4rem;
+      }
+
+      .transaction-type {
+        padding: .2rem .6rem;
+        border-radius: 1.2rem;
+
+      }
+
+      .deposit {
+        background-image: linear-gradient(to top left, #39b385, #9be15d);
+
+      }
+
+      .withdraw {
+          background-image: linear-gradient(to top left, #e52a5a, #ff585f);
 
       }
     }
   }
 }
+

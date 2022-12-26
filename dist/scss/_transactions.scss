@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  gap: 3rem;
+  gap: 10vw;
   width: 100vw;
   max-width: 1200px;
   height: fit-content;
@@ -8,44 +8,46 @@
   .transactions {
     height: 25rem;
     width: 84%;
-    margin: 1rem auto;
-    border-radius: 1rem;
-    padding: 1.2rem 0;
+    margin: 4vw auto;
+    border-radius: 4vw;
+    padding: 2vw 0;
     @include flexCenter(column);
     justify-content: flex-start;
 
     .transaction {
       width: 100%;
-      margin: 0 0 1rem 0;
+      margin: 0 0 4vw 0;
       @include flexCenter(row);
-      padding: 0.6rem;
-      font-size: 0.7rem;
+      padding: 1.6vw;
+      font-size: 1.8vw;
       border-bottom: 1px solid $text-color;
 
       .transaction-date {
-        margin-left: -14rem;
+        margin-left: -36vw;
       }
 
       .transaction-amount {
-        font-size: 1.4rem;
+        font-size: 3vw;
       }
 
       .transaction-type {
-        padding: .2rem .6rem;
-        border-radius: 1.2rem;
+        padding: 0.6vw 3vw;
+        border-radius: 6vw;
+        color: $deposit-text;
 
+        .trans-index {
+          margin-right: 0.4vw;
+        }
       }
 
       .deposit {
         background-image: linear-gradient(to top left, #39b385, #9be15d);
-
       }
 
       .withdraw {
-          background-image: linear-gradient(to top left, #e52a5a, #ff585f);
-
+        background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+        color: lighten($deposit-text, 100%);
       }
     }
   }
 }
-

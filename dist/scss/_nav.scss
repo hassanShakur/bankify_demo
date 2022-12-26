@@ -1,10 +1,10 @@
 nav {
-  height: 4rem;
+  height: 10vw;
   position: relative;
-  padding: 1rem 2rem;
+  padding: 2.5vw 4.8vw;
 
   div {
-    padding: 0.2rem 0.4rem;
+    padding: 1vw 1.2vw;
   }
 
   .greet {
@@ -12,19 +12,20 @@ nav {
   }
 
   .login-actions {
-    margin-top: 6rem;
-    height: 18rem;
-    padding: 2rem;
-    border-radius: 1em;
+    margin-top: 10vh;
+    height: 38vh;
+    padding: 8vw;
+    border-radius: 1vw;
     text-align: center;
     @include flexCenter(column);
     transform: translateY(-100vh);
 
     button {
-      padding: 0.6rem 1.4rem;
-      border-radius: 0.6em;
+      padding: 1.6vw 3.3vw;
+      text-transform: capitalize;
+      border-radius: 1vw;
       align-self: flex-start;
-      margin-top: 1.4rem;
+      margin-top: 2.4vh;
       border: 1.2px solid transparent;
     }
 

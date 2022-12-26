@@ -31,19 +31,20 @@
   .balance-details {
     padding: 0 0;
     padding-right: 1rem;
-    margin: 1rem auto;
+    margin: 0.1rem auto;
+    margin-bottom: 1.4rem;
 
     .details {
-      padding: .4rem;
+      padding: 0.3rem;
       border-radius: 1rem;
 
       .balance-text {
         font-size: 1.8rem;
-        margin-bottom: .6rem;
+        margin-bottom: 0.6rem;
       }
 
       .balance-date {
-        font-size: .6rem;
+        font-size: 0.6rem;
       }
     }
 

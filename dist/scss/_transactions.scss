@@ -68,8 +68,6 @@
     grid-template-rows: repeat(4, 1fr);
     gap: 2rem;
     height: fit-content;
-    
-    background-color: red;
 
     .transactions {
       grid-column: 1 / 5;
@@ -80,6 +78,7 @@
       margin: 0 0;
       border-radius: 2rem;
       padding: 0 0;
+      box-shadow: 1vw 1vw 3.8vw 1.4vw lighten($background, 10%);
 
       .transaction {
         width: 100%;

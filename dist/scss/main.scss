@@ -33,8 +33,9 @@ input {
 @media (min-width: 600px) {
   body {
     max-height: 100vh;
+    overflow: hidden;
   }
-  
+
   input {
     font-size: 0.8rem;
     padding: 0.4rem;

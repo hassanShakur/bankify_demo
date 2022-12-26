@@ -1,0 +1,19 @@
+.balance-details {
+  padding: .6rem;
+  @include flexCenter(row);
+
+  .details {
+    padding: 0.6rem;
+    border-radius: 0.4em;
+
+    .balance-text {
+      font-size: 1.8rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .balance {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,1 +1,28 @@
+@import './config';
+@import './nav';
+@import './balance';
 
+body {
+  background-color: $background;
+  color: $text-color;
+  text-transform: capitalize;
+  font-size: medium;
+  line-height: 1.4;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+input {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  padding: 0.6em;
+  border-radius: 0.4em;
+  border: 1px solid transparent;
+  margin-top: 1.2rem;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid aquamarine;
+  }
+}

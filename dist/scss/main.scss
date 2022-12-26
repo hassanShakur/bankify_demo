@@ -29,3 +29,14 @@ input {
     border: 1px solid aquamarine;
   }
 }
+
+@media (min-width: 600px) {
+
+  input {
+    font-size: .8rem;
+    padding: .4rem;
+    border-radius: .2rem;
+    margin-top: 1rem;
+
+  }
+}

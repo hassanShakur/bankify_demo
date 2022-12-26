@@ -68,3 +68,49 @@
     }
   }
 }
+
+@media (min-width: 600px) {
+  .side-operations {
+    width: fit-content;
+    grid-column: 5 / 8;
+    grid-row: 1 / 4;
+    margin: 1rem auto;
+
+    article {
+      height: fit-content;
+      width: 100%;
+      margin: 0 0.8rem;
+      margin-bottom: 1rem;
+      padding: 1rem 1rem 1.8rem 2rem;
+      border-radius: 1rem;
+
+      form {
+        @include flexCenter(row);
+        align-items: center;
+
+        input {
+          margin-bottom: 0.6rem;
+        }
+
+        button {
+          padding: 1rem;
+          border-radius: 0.2rem;
+
+          &:hover {
+            box-shadow: 0.2rem 0.2rem 0.1rem -0.1rem rgba(0, 0, 0, 0.6);
+          }
+
+          i {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .request-loan-form {
+        label {
+          display: block;
+        }
+      }
+    }
+  }
+}

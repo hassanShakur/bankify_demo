@@ -3,16 +3,25 @@
   gap: 10vw;
   width: 95vw;
   max-width: 1200px;
+  margin: 0 auto;
   height: fit-content;
 
   .transactions {
-    height: 30rem;
-    width: 84%;
+    height: 60vh;
+    width: 90%;
+    overflow-y: scroll;
     margin: 4vw auto;
     border-radius: 4vw;
     padding: 2vw 0;
     @include flexCenter(column);
     justify-content: flex-start;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     .transaction {
       width: 100%;
@@ -20,7 +29,7 @@
       @include flexCenter(row);
       padding: 1.6vw;
       font-size: 1.8vw;
-      border-bottom: .1vw solid $text-color;
+      border-bottom: 0.1vw solid $text-color;
 
       .transaction-date {
         margin-left: -36vw;
@@ -50,5 +59,49 @@
       }
     }
     box-shadow: $main-shadow;
+  }
+}
+
+@media (min-width: 600px) {
+  .main {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3rem;
+
+    .transactions {
+      grid-column: 1 / 5;
+      grid-row: 1 / 4;
+      height: 30rem;
+      width: unset;
+      overflow: scroll;
+      margin: 0 0;
+      border-radius: 2rem;
+      padding: 0 0;
+
+      .transaction {
+        width: 100%;
+        margin: 0 0 3rem 0;
+        padding: 1rem;
+        font-size: 1rem;
+        border-bottom: 0.2rem solid $text-color;
+
+        .transaction-date {
+          margin-left: -5rem;
+        }
+
+        .transaction-amount {
+          font-size: 1rem;
+        }
+
+        .transaction-type {
+          padding: 0 0;
+          border-radius: 2rem;
+
+          .trans-index {
+            margin-right: 0.4rem;
+          }
+        }
+      }
+    }
   }
 }

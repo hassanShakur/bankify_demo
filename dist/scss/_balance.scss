@@ -2,6 +2,7 @@
   padding: 1vw 2vw;
   padding-right: 4vw;
   width: 95vw;
+  max-width: 1200px;
   margin: 1vw auto;
   overflow: hidden;
   @include flexCenter(row);
@@ -23,5 +24,32 @@
   .balance {
     font-size: 4.4vw;
     margin-bottom: 4.6vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .balance-details {
+    padding: 0 0;
+    padding-right: 1rem;
+    margin: 1rem auto;
+
+    .details {
+      padding: .4rem;
+      border-radius: 1rem;
+
+      .balance-text {
+        font-size: 1.8rem;
+        margin-bottom: .6rem;
+      }
+
+      .balance-date {
+        font-size: .6rem;
+      }
+    }
+
+    .balance {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
   }
 }

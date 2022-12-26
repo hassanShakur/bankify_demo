@@ -25,3 +25,24 @@
     color: red;
   }
 }
+
+@media (min-width: 600px) {
+  .summary {
+    padding: 0;
+    grid-column: 1 / 6;
+    grid-row: 5;
+    background-color: red;
+    margin: 1rem auto;
+    margin-top: -2rem;
+    width: 85%;
+    border-radius: 1rem;
+
+    div {
+      font-size: 1rem;
+
+      span {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

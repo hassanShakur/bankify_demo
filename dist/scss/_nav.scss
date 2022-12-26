@@ -3,9 +3,11 @@ nav {
   position: relative;
   padding: 2.5vw 2vw;
   width: 95vw;
+  max-width: 1200px;
+  margin: 0 auto;
 
   div {
-    padding: 1vw .6vw;
+    padding: 1vw 0.6vw;
   }
 
   .greet {
@@ -13,6 +15,10 @@ nav {
 
     .greetings {
       font-size: 2.4vw;
+    }
+
+    img {
+      width: 5vw;
     }
   }
 
@@ -39,6 +45,49 @@ nav {
     }
     .logout {
       display: none;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  nav {
+    height: 5rem;
+    width: 95vw;
+    padding: 0 0;
+    margin-top: 2rem;
+
+    div {
+      padding: 0;
+    }
+
+    .greet {
+      .greetings {
+        font-size: 1rem;
+      }
+
+      img {
+        width: 3rem;
+      }
+    }
+
+    .login-actions {
+      margin-top: 10vh;
+      height: 38vh;
+      padding: 8vw;
+      border-radius: 1vw;
+      text-align: center;
+      @include flexCenter(column);
+      // transform: translateY(-100vh);
+
+      button {
+        padding: 1.6vw 3.3vw;
+        text-transform: capitalize;
+        border-radius: 1vw;
+        align-self: flex-start;
+        margin-top: 2.4vh;
+        border: 1.2px solid transparent;
+      }
+
     }
   }
 }

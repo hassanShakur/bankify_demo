@@ -28,13 +28,14 @@
 
 @media (min-width: 600px) {
   .summary {
-    padding: 0;
-    grid-column: 1 / 6;
-    grid-row: 5;
-    background-color: red;
+    padding: 0 2rem;
+    grid-column: 1 / 8;
+    grid-row: 4;
+    background-color: blue;
     margin: 1rem auto;
-    margin-top: -2rem;
-    width: 85%;
+    margin-top: 0rem;
+    width: 100%;
+    height: fit-content;
     border-radius: 1rem;
 
     div {

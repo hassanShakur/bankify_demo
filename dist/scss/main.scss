@@ -31,12 +31,14 @@ input {
 }
 
 @media (min-width: 600px) {
-
+  body {
+    max-height: 100vh;
+  }
+  
   input {
-    font-size: .8rem;
-    padding: .4rem;
-    border-radius: .2rem;
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
     margin-top: 1rem;
-
   }
 }

@@ -6,7 +6,7 @@
   height: fit-content;
 
   .transactions {
-    height: 25rem;
+    height: 30rem;
     width: 84%;
     margin: 4vw auto;
     border-radius: 4vw;
@@ -20,7 +20,7 @@
       @include flexCenter(row);
       padding: 1.6vw;
       font-size: 1.8vw;
-      border-bottom: 1px solid $text-color;
+      border-bottom: .1vw solid $text-color;
 
       .transaction-date {
         margin-left: -36vw;

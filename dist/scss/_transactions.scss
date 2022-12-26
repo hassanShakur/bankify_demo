@@ -49,6 +49,6 @@
         color: lighten($deposit-text, 100%);
       }
     }
-    box-shadow: 11px 11px 8px -4px lighten($background, 10%);
+    box-shadow: $main-shadow;
   }
 }

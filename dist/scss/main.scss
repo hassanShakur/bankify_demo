@@ -3,6 +3,7 @@
 @import './balance';
 @import './transactions';
 @import './side_opps';
+@import './summary';
 
 body {
   background-color: $background;
@@ -23,7 +24,6 @@ input {
   background: lighten($background, 84%);
   margin-top: 3vw;
 
-  
   &:focus {
     outline: none;
     border: 1px solid aquamarine;

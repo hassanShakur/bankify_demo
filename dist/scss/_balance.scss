@@ -1,5 +1,6 @@
 .balance-details {
-  padding: 1vw;
+  padding: 1vw 2vw;
+  padding-right: 4vw;
   width: 95vw;
   margin: 1vw auto;
   overflow: hidden;
@@ -8,7 +9,7 @@
   .details {
     padding: 2vw;
     border-radius: 2vw;
-    
+
     .balance-text {
       font-size: 4.2vw;
       margin-bottom: 1vw;
@@ -22,6 +23,5 @@
   .balance {
     font-size: 4.4vw;
     margin-bottom: 4.6vw;
-    
   }
 }

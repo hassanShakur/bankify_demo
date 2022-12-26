@@ -1,15 +1,19 @@
 nav {
   height: 10vw;
   position: relative;
-  padding: 2.5vw 4.8vw;
+  padding: 2.5vw 2vw;
   width: 95vw;
 
   div {
-    padding: 1vw 1.2vw;
+    padding: 1vw .6vw;
   }
 
   .greet {
     @include flexCenter(row-reverse);
+
+    .greetings {
+      font-size: 2.4vw;
+    }
   }
 
   .login-actions {

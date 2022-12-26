@@ -1,0 +1,27 @@
+.summary {
+  background: $background;
+  padding: 2vw;
+  margin: 2vw auto;
+  margin-top: -8vw;
+  width: 85%;
+  @include flexCenter(row);
+  border-radius: 1vw;
+  box-shadow: 6px 6px 4px -2px lighten($background, 10%);
+
+  div {
+    font-size: 3vw;
+
+    span {
+      font-size: 4vw;
+    }
+  }
+
+  .in-amount,
+  .interest-amount {
+    color: green;
+  }
+
+  .out-amount {
+    color: red;
+  }
+}

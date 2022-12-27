@@ -3,7 +3,7 @@ import get from './getElement.js';
 const transferAmount = get('.transfer-amount');
 const transferTo = get('.transfer-to');
 
-function transferFunds(currentUser, accounts) {
+const transferFunds = (currentUser, accounts) => {
   const amount = Number(transferAmount.value);
   const inputToAcc = transferTo.value;
   const receiverAcc = accounts.find(
@@ -23,6 +23,6 @@ function transferFunds(currentUser, accounts) {
     transferAmount.value = transferTo.value = '';
     transferTo.blur();
   }
-}
+};
 
 export default transferFunds;

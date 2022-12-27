@@ -2,7 +2,7 @@ import get from './getElement.js';
 
 const transactionsCont = get('.transactions');
 
-const getTransactions = function (transaction) {
+const getTransactions = (transaction) => {
   let transHtml = transaction
     .map((trans, index) => {
       const transType = trans > 0 ? 'deposit' : 'withdrawal';
@@ -18,7 +18,8 @@ const getTransactions = function (transaction) {
         </div>
         <!-- End single transaction -->`;
     })
-    .reverse().join('');
+    .reverse()
+    .join('');
 
   transactionsCont.innerHTML = transHtml;
 };

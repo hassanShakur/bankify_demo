@@ -1,7 +1,7 @@
 // * Get name initials from accounts
 
-const getUserName = function (accs) {
-  accs.forEach(function (acc) {
+const getUserName = (accs) => {
+  accs.forEach((acc) => {
     acc.userName = acc.owner
       .toLowerCase()
       .split(' ')

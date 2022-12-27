@@ -14,9 +14,8 @@ const accounts = [acc1, acc2, acc3];
 getUserName(accounts);
 
 // ? Validate login credentials and display information
-
 const loginBtn = get('.login-btn');
-loginBtn.addEventListener('click', function (e) {
+loginBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
   // Login user and get user details
@@ -24,13 +23,10 @@ loginBtn.addEventListener('click', function (e) {
 });
 
 // * Handle funds transfer
-
 const transferBtn = get('.transfer-btn');
 
-transferBtn.addEventListener('click', function (e) {
+transferBtn.addEventListener('click', (e) => {
   e.preventDefault();
-
-  // Transfer funds
   transferFunds(currentUser, accounts);
 
   // * Update UI
@@ -38,15 +34,13 @@ transferBtn.addEventListener('click', function (e) {
 });
 
 // ! Logout user
-const logoutBtn = document.querySelector('.logout');
+const logoutBtn = get('.logout');
 logoutBtn.addEventListener('click', logoutUser);
 
-// ! Close user account
-const closeAccountBtn = document.querySelector('.close-acc-btn');
+// ! Close and delete user account
+const closeAccountBtn = get('.close-acc-btn');
 
-
-closeAccountBtn.addEventListener('click', function (e) {
+closeAccountBtn.addEventListener('click', (e) => {
   e.preventDefault();
-
   deleteAccount(currentUser, accounts);
 });

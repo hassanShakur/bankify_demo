@@ -5,6 +5,7 @@ import logoutUser from './logoutUser.js';
 import { acc1, acc2, acc3 } from './data.js';
 import getUserName from './getInitials.js';
 import transferFunds from './transferFunds.js';
+import deleteAccount from './deleteAccount.js';
 
 let currentUser;
 
@@ -20,9 +21,6 @@ loginBtn.addEventListener('click', function (e) {
 
   // Login user and get user details
   currentUser = loginUser(accounts);
-
-  // * Update UI
-  updateUI(currentUser);
 });
 
 // * Handle funds transfer
@@ -40,7 +38,15 @@ transferBtn.addEventListener('click', function (e) {
 });
 
 // ! Logout user
-
 const logoutBtn = document.querySelector('.logout');
 logoutBtn.addEventListener('click', logoutUser);
 
+// ! Close user account
+const closeAccountBtn = document.querySelector('.close-acc-btn');
+
+
+closeAccountBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  deleteAccount(currentUser, accounts);
+});

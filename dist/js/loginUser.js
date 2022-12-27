@@ -1,4 +1,6 @@
 import get from './getElement.js';
+import updateUI from './updateUI.js';
+
 
 let activeUser;
 
@@ -16,15 +18,18 @@ const loginUser = (accounts) => {
   if (activeUser?.pass === password) {
     mainSection.classList.add('logged-in');
     loginContainer.classList.add('hide-login');
+
+    // * Update UI
+    updateUI(activeUser);
+
+    // ? Greet user
+    greetings.innerHTML = `good <span class="greet-time">afternoon, </span
+          ><span class="name">${activeUser.owner.split(' ')[0]}</span>`;
   }
 
   // ! Reset login inputs
   inputPassword.value = inputUserName.value = '';
   inputPassword.blur();
-
-  // ? Greet user
-  greetings.innerHTML = `good <span class="greet-time">afternoon, </span
-          ><span class="name">${activeUser.owner.split(' ')[0]}</span>`;
 
   return activeUser;
 };

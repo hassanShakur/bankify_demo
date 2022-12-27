@@ -26,20 +26,22 @@ input {
 
   &:focus {
     outline: none;
-    border: 1px solid aquamarine;
+    border: 1px solid rgba(172, 220, 255, 0.647);
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 720px) {
   body {
     max-height: 100vh;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   input {
-    font-size: 0.8rem;
+    font-size: 1vw;
     padding: 0.4rem;
     border-radius: 0.2rem;
     margin-top: 1rem;
+    width: 8vw;
+    
   }
 }

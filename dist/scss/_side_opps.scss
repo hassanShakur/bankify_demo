@@ -14,6 +14,12 @@
       @include flexCenter(column);
       align-items: flex-start;
 
+      div {
+        @include flexCenter(column);
+        align-items: flex-start;
+        padding-bottom: 1rem;
+      }
+
       input {
         margin-bottom: 1vw;
       }
@@ -21,9 +27,11 @@
       button {
         background: transparent;
         border: none;
+        margin-left: 3rem;
+        margin-top: -1rem;
         padding: 1.2vw 1.8vw;
         border-radius: 1vw;
-        align-self: flex-end;
+        align-self: center;
 
         &:hover {
           transform: translateY(2px);
@@ -47,6 +55,10 @@
   .transfer {
     background-image: linear-gradient(to bottom right, #ffb003, #ffcb03);
 
+    input {
+      background: lighten(#ffb003, 20%);
+    }
+
     button {
       background: #ffb003;
     }
@@ -54,6 +66,10 @@
 
   .request-loan {
     background-image: linear-gradient(to bottom right, #39b385, #9be15d);
+
+    input {
+      background: lighten(#39b385, 20%);
+    }
 
     button {
       background: #39b385;
@@ -63,25 +79,29 @@
   .close-acc {
     background-image: linear-gradient(to bottom right, #e52a5a, #ff585f);
 
+    input {
+      background: lighten(#e52a5a, 20%);
+    }
+
     button {
       background: #e52a5a;
     }
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 720px) {
   .side-operations {
     width: fit-content;
     grid-column: 5 / 8;
     grid-row: 1 / 4;
-    margin: 1rem auto;
+    margin: .4rem auto;
 
     article {
       height: fit-content;
       width: 100%;
       margin: 0 0.8rem;
       margin-bottom: 1rem;
-      padding: 1rem 1rem 1.8rem 2rem;
+      padding: 1rem 1vw 1.2rem 2vw;
       border-radius: 1rem;
 
       form {

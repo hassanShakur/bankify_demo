@@ -6,7 +6,7 @@ const updateUI = (activeUser) => {
   getTrans(activeUser.transactions);
 
   // ! Get Balance, Ins and outs
-  getTotals(activeUser.transactions, activeUser.interestRate);
+  getTotals(activeUser);
 };
 
 export default updateUI;

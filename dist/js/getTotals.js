@@ -5,17 +5,17 @@ const insLabel = get('.in-amount');
 const outsLabel = get('.out-amount');
 const interestLabel = get('.interest-amount');
 
-const getTotals = (transactions, interestRate) => {
+const getTotals = (acc) => {
   let ins = 0;
   let outs = 0;
 
   // * Interest for every deposit
-  let interest = transactions
+  let interest = acc.transactions
     .filter((trans) => trans > 0)
-    .map((deposit) => deposit * (interestRate / 100))
+    .map((deposit) => deposit * (acc.interestRate / 100))
     .reduce((acc, int) => acc + int, 0);
 
-  const balance = transactions.reduce((acc, cur) => {
+  const balance = acc.transactions.reduce((acc, cur) => {
     if (cur > 0) {
       ins += cur;
     } else {
@@ -23,6 +23,8 @@ const getTotals = (transactions, interestRate) => {
     }
     return acc + cur;
   }, 0);
+
+  acc.balance = balance;
 
   balanceLabel.textContent = `${balance}£`;
   insLabel.textContent = `${ins}£`;

@@ -18,15 +18,13 @@
   <body>
     <nav>
       <div class="greet">
-        <div class="greetings">
-          login to continue
-        </div>
+        <div class="greetings">login to continue</div>
         <div class="logo">
           <img src="./dist/images/logo.png" alt="" />
         </div>
       </div>
 
-      <form class="login">
+      <form class="login hide-login">
         <input
           type="text"
           name="user-name"
@@ -43,7 +41,7 @@
       </form>
     </nav>
 
-    <main class="main">
+    <main class="main logged-in">
       <div class="balance-details">
         <div class="details">
           <p class="balance-text">current balance</p>
@@ -63,15 +61,20 @@
           <h3>transfer</h3>
           <form class="transfer-form">
             <div>
-              <input type="text" name="" id="transfer-to" />
+              <input type="text" class="transfer-to" name="" id="transfer-to" />
               <label for="transfer-to">transfer to</label>
             </div>
             <div>
-              <input type="number" name="" id="transfer-amount" />
+              <input
+                type="number"
+                name=""
+                id="transfer-amount"
+                class="transfer-amount"
+              />
               <label for="transfer-amount">transfer amount</label>
             </div>
 
-            <button class="transfer-btn" type="button">
+            <button class="transfer-btn" type="submit">
               <i class="fa fa-person-circle-check" aria-hidden="true"> </i>
             </button>
           </form>

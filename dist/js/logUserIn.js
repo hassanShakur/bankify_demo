@@ -1,15 +1,14 @@
-import getTrans from './getTransactions.js';
-import getTotals from './getTotals.js';
 import get from './getElement.js';
 import { acc1, acc2, acc3 } from './data.js';
 import getUserName from './getInitials.js';
+import updateUI from './updateUI.js';
 
 let activeUser;
 
 const mainSection = get('.main');
 const loginContainer = get('.login');
 const inputUserName = get('.user-name');
-const inputPassword = document.querySelector('.password');
+const inputPassword = get('.password');
 const greetings = get('.greetings');
 
 // * Get name initials from accounts
@@ -27,11 +26,8 @@ const logUserIn = (e) => {
     loginContainer.classList.add('hide-login');
   }
 
-  // ? Populate the transactions
-  getTrans(activeUser.transactions);
-
-  // ! Get Balance, Ins and outs
-  getTotals(activeUser.transactions, activeUser.interestRate);
+  // * Update UI
+  updateUI(activeUser);
 
   // ? Greet use
   greetings.innerHTML = `good <span class="greet-time">afternoon, </span
@@ -40,6 +36,8 @@ const logUserIn = (e) => {
   // ! Reset login inputs
   inputPassword.value = inputUserName.value = '';
   inputPassword.blur();
+
+  return activeUser;
 };
 
 export default logUserIn;

@@ -2,13 +2,16 @@ import get from './getElement.js';
 
 let activeUser;
 
+const inputUserName = get('.user-name');
+const inputPassword = get('.password');
+
 const mainSection = get('.main');
 const loginContainer = get('.login');
 const greetings = get('.greetings');
 
-
-
-const logUserIn = (name, password, accounts) => {
+const logUserIn = (accounts) => {
+  const password = Number(inputPassword.value);
+  const name = inputUserName.value;
   activeUser = accounts.find((account) => account.userName === name);
   if (activeUser?.pass === password) {
     mainSection.classList.add('logged-in');

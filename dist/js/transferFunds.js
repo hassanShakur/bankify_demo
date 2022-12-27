@@ -1,4 +1,11 @@
-function transferFunds(amount, inputToAcc, currentUser, accounts) {
+import get from './getElement.js';
+
+const transferAmount = get('.transfer-amount');
+const transferTo = get('.transfer-to');
+
+function transferFunds(currentUser, accounts) {
+  const amount = Number(transferAmount.value);
+  const inputToAcc = transferTo.value;
   const receiverAcc = accounts.find(
     (account) => account.userName === inputToAcc
   );

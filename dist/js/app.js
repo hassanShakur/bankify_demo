@@ -1,4 +1,6 @@
 import { acc1, acc2, acc3 } from './data.js';
+import get from './getElement.js';
+import getTrans from './getTransactions.js';
 
 const accounts = [acc1, acc2, acc3];
 
@@ -15,4 +17,8 @@ const getUserName = function (accs) {
 };
 
 getUserName(accounts);
-// console.log(acc1.userName);
+
+
+// ? Populate the transactions
+let transaction = acc1.transactions;
+getTrans(transaction);

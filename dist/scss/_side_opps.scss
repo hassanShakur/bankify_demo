@@ -89,22 +89,31 @@
 
 @media (min-width: 720px) {
   .side-operations {
-    width: fit-content;
-    grid-column: 5 / 8;
-    grid-row: 1 / 4;
+    width: unset;
+    grid-column: 5 / 7;
+    grid-row: 2 / 5;
     margin: 0.4rem auto;
+    transform: translateY(2rem);
 
     article {
       height: fit-content;
-      width: 100%;
-      margin: 0 0.8rem;
+      width: unset;
+      margin: 0 0.4rem;
       margin-bottom: 1rem;
       padding: 1rem 1vw 1.2rem 2vw;
       border-radius: 1rem;
 
+      h3 {
+        font-size: 1rem;
+      }
+
       form {
         @include flexCenter(row);
         align-items: center;
+
+        label {
+          font-size: 0.8rem;
+        }
 
         input {
           margin-bottom: 0.6rem;

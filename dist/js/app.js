@@ -19,9 +19,22 @@ const getUserName = function (accs) {
 
 getUserName(accounts);
 
+// ? Implement login information
+
 // ? Populate the transactions
 let transactions1 = acc1.transactions;
 getTrans(transactions1);
 
 // ! Get Balance, Ins and outs
 getTotals(transactions1);
+
+const loginBtn = document.querySelector('.login-btn');
+const main = document.querySelector('.main');
+const login = get('.login');
+
+loginBtn.addEventListener('click', (e) => {
+  e.preventDefault;
+  console.log('hello');
+  main.classList.add('logged-in');
+  login.classList.add('hide-login');
+});

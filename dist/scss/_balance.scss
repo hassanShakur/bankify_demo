@@ -29,28 +29,31 @@
 
 @media (min-width: 720px) {
   .balance-details {
+    grid-row: 1;
+    grid-column: 1 / 8;
     padding: 0 0;
-    padding-right: 1rem;
+    padding-right: 14rem;
     margin: 0.1rem auto;
     margin-bottom: 1.4rem;
+    transform: translateY(2rem);
 
     .details {
       padding: 0.3rem;
       border-radius: 1rem;
 
       .balance-text {
-        font-size: 1.8rem;
+        font-size: 2rem;
         margin-bottom: 0.6rem;
       }
 
       .balance-date {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
       }
     }
 
     .balance {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      font-size: 3rem;
+      margin-bottom: 1.2rem;
     }
   }
 }

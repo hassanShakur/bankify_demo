@@ -27,30 +27,26 @@
         </div>
       </div>
 
-      <div class="login-actions">
-        <div class="logout">
-          <button class="logout-btn">logout</button>
-        </div>
-        <div class="login">
-          <input type="text" name="user-name" placeholder="user name" />
-          <input type="password" name="password" placeholder="password" />
-          <button class="login-btn">login</button>
-        </div>
+      <div class="login">
+        <input type="text" name="user-name" placeholder="user name (ab)" />
+        <input type="password" name="password" placeholder="password (111)" />
+        <button type="submit" class="login-btn">login</button>
       </div>
     </nav>
-    <div class="balance-details">
-      <div class="details">
-        <p class="balance-text">current balance</p>
-        <div class="balance-date">
-          <p>
-            as of <span class="date">11/2/2001, </span>
-            <span class="time">11:50</span>
-          </p>
-        </div>
-      </div>
-      <div class="balance">374,483€</div>
-    </div>
+
     <main class="main">
+      <div class="balance-details">
+        <div class="details">
+          <p class="balance-text">current balance</p>
+          <div class="balance-date">
+            <p>
+              as of <span class="date">11/2/2001, </span>
+              <span class="time">11:50</span>
+            </p>
+          </div>
+        </div>
+        <div class="balance"></div>
+      </div>
       <div class="transactions"></div>
       <div class="side-operations">
         <!-- Side operation transaction -->
@@ -109,13 +105,13 @@
       </div>
       <div class="summary">
         <div class="in">
-          <h5>in <span class="in-amount">465€</span></h5>
+          <h5>in <span class="in-amount"></span></h5>
         </div>
         <div class="out">
-          <h5>out <span class="out-amount">465€</span></h5>
+          <h5>out <span class="out-amount"></span></h5>
         </div>
         <div class="interest">
-          <h5>interest <span class="interest-amount">465€</span></h5>
+          <h5>interest <span class="interest-amount"></span></h5>
         </div>
         <div class="sort">
           <i class="fa fa-sort-amount-asc"></i>

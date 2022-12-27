@@ -1,10 +1,17 @@
 .main {
   display: grid;
-  gap: 10vw;
+  gap: 1vw;
   width: 95vw;
   max-width: 1200px;
   margin: 0 auto;
   height: fit-content;
+  transform: scale(0%);
+  opacity: 0;
+
+  &.logged-in {
+    transform: unset;
+    opacity: 1;
+  }
 
   .transactions {
     height: 60vh;
@@ -65,20 +72,24 @@
 @media (min-width: 720px) {
   .main {
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 2rem;
-    height: fit-content;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: -2rem;
+    height: 730px;
+    padding: 0 6rem;
 
     .transactions {
       grid-column: 1 / 5;
-      grid-row: 1 / 4;
+      grid-row: 2 / 5;
       height: 30rem;
       width: unset;
       overflow: scroll;
       margin: 0 0;
+      margin-right: 2rem;
+      transform: translateY(1.8rem);
       border-radius: 1.2rem;
       padding: 1rem 0.6rem;
-      box-shadow: 1vw 1vw 3.8vw 1.4vw lighten($background, 10%);
+      box-shadow: 0.6rem 0.6rem 2.8rem 0.7rem lighten($background, 20%);
 
       .transaction {
         width: 100%;

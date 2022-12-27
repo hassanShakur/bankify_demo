@@ -22,22 +22,40 @@ nav {
     }
   }
 
-  .login-actions {
+  .login {
+    max-width: 600px;
+    background: rgba(32, 141, 171, 0.474);
     margin-top: 10vh;
-    height: 38vh;
+    margin: 10vh auto;
+    height: fit-content;
     padding: 8vw;
+    z-index: 1000;
     border-radius: 1vw;
     text-align: center;
     @include flexCenter(column);
-    transform: translateY(-100vh);
+    transform: scale(1);
+
+    &.hide-login {
+      transform: scale(0%);
+    }
+
+    input {
+      background: rgb(161, 234, 254);
+    }
 
     button {
+      background: rgb(16, 155, 67);
+      color: $text-color;
       padding: 1.6vw 3.3vw;
       text-transform: capitalize;
       border-radius: 1vw;
-      align-self: flex-start;
-      margin-top: 2.4vh;
+      margin-top: 2.6vh;
       border: 1.2px solid transparent;
+
+      &:hover {
+        background: rgb(11, 125, 53);
+        cursor: pointer;
+      }
     }
 
     .login {
@@ -70,24 +88,23 @@ nav {
       }
     }
 
-    .login-actions {
-      margin-top: 10vh;
-      height: 38vh;
-      padding: 8vw;
-      border-radius: 1vw;
-      text-align: center;
-      @include flexCenter(column);
-      // transform: translateY(-100vh);
+    .login {
+      height: 15rem;
+      padding: 1rem;
+      justify-content: flex-start;
 
-      button {
-        padding: 1.6vw 3.3vw;
-        text-transform: capitalize;
-        border-radius: 1vw;
-        align-self: flex-start;
-        margin-top: 2.4vh;
-        border: 1.2px solid transparent;
+      input {
+        width: 16rem;
+        margin-bottom: 1rem;
       }
 
+      button {
+        padding: 0.6rem 2.6rem;
+        text-transform: capitalize;
+        border-radius: 0.4rem;
+        margin-top: 2.4vh;
+        margin-right: -8rem;
+      }
     }
   }
 }

@@ -23,6 +23,5 @@ getUserName(accounts);
 let transactions1 = acc1.transactions;
 getTrans(transactions1);
 
-
 // ! Get Balance, Ins and outs
 getTotals(transactions1);

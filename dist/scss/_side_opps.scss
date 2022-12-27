@@ -27,11 +27,9 @@
       button {
         background: transparent;
         border: none;
-        margin-left: 3rem;
-        margin-top: -1rem;
         padding: 1.2vw 1.8vw;
         border-radius: 1vw;
-        align-self: center;
+        align-self: flex-end;
 
         &:hover {
           transform: translateY(2px);
@@ -94,7 +92,7 @@
     width: fit-content;
     grid-column: 5 / 8;
     grid-row: 1 / 4;
-    margin: .4rem auto;
+    margin: 0.4rem auto;
 
     article {
       height: fit-content;
@@ -115,6 +113,9 @@
         button {
           padding: 1rem;
           border-radius: 0.2rem;
+          margin-top: -1rem;
+          margin-left: 3rem;
+          align-self: center;
 
           &:hover {
             box-shadow: 0.2rem 0.2rem 0.1rem -0.1rem rgba(0, 0, 0, 0.6);

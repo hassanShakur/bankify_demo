@@ -9,7 +9,7 @@ const mainSection = get('.main');
 const loginContainer = get('.login');
 const greetings = get('.greetings');
 
-const logUserIn = (accounts) => {
+const loginUser = (accounts) => {
   const password = Number(inputPassword.value);
   const name = inputUserName.value;
   activeUser = accounts.find((account) => account.userName === name);
@@ -29,4 +29,4 @@ const logUserIn = (accounts) => {
   return activeUser;
 };
 
-export default logUserIn;
+export default loginUser;

@@ -1,6 +1,7 @@
 import get from './getElement.js';
 import updateUI from './updateUI.js';
-import logUserIn from './logUserIn.js';
+import loginUser from './loginUser.js';
+import logoutUser from './logoutUser.js';
 import { acc1, acc2, acc3 } from './data.js';
 import getUserName from './getInitials.js';
 import transferFunds from './transferFunds.js';
@@ -18,7 +19,7 @@ loginBtn.addEventListener('click', function (e) {
   e.preventDefault();
 
   // Login user and get user details
-  currentUser = logUserIn(accounts);
+  currentUser = loginUser(accounts);
 
   // * Update UI
   updateUI(currentUser);
@@ -37,3 +38,9 @@ transferBtn.addEventListener('click', function (e) {
   // * Update UI
   updateUI(currentUser);
 });
+
+// ! Logout user
+
+const logoutBtn = document.querySelector('.logout');
+logoutBtn.addEventListener('click', logoutUser);
+

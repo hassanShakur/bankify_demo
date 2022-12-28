@@ -8,7 +8,7 @@ const showNotification = (type, message) => {
   notifier.classList.add('show-notification');
   setTimeout(() => {
     notifier.classList.remove('show-notification');
-  }, 1400);
+  }, 1800);
 };
 
 export default showNotification;

@@ -1,4 +1,5 @@
 import get from './getElement.js';
+import showNotification from './showNotification.js';
 
 const logoutUser = () => {
   const mainSection = get('.main');
@@ -9,6 +10,8 @@ const logoutUser = () => {
   loginContainer.classList.remove('hide-login');
   greetings.innerHTML = '';
   greetings.textContent = 'login to continue';
+
+  showNotification('success', `fare thee well 😊`);
 };
 
 export default logoutUser;

@@ -6,7 +6,7 @@ const transferAmount = get('.transfer-amount');
 const transferTo = get('.transfer-to');
 
 const transferFunds = (currentUser, accounts) => {
-  const amount = Number(transferAmount.value);
+  const amount = +transferAmount.value;
   const inputToAcc = transferTo.value.toLowerCase();
 
   const receiverAcc = accounts.find(

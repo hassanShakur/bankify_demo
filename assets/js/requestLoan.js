@@ -5,7 +5,7 @@ import showNotification from './showNotification.js';
 const loanAmount = get('.request-loan-amount');
 
 const requestLoan = (currentUser) => {
-  const amount = Number(loanAmount.value);
+  const amount = +loanAmount.value;
 
   if (amount > 10000) {
     showNotification('error', 'Loan must be less than 10000£!');

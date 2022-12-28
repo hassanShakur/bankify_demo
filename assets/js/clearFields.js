@@ -1,19 +1,29 @@
-const inputUserName = document.querySelector('.user-name');
-const inputPassword = document.querySelector('.password');
+import get from './getElement.js';
 
-const transferAmount = document.querySelector('.transfer-amount');
-const transferTo = document.querySelector('.transfer-to');
-const inputAccountUser = document.querySelector('.close-acc-user');
-const inputAccountPassword = document.querySelector('.close-acc-password');
+const inputUserName = get('.user-name');
+const inputPassword = get('.password');
+
+const transferAmount = get('.transfer-amount');
+const transferTo = get('.transfer-to');
+const inputAccountUser = get('.close-acc-user');
+const inputAccountPassword = get('.close-acc-password');
+const loanAmount = get('.request-loan-amount');
 
 function clearFields() {
-  inputUserName.value =
-    inputPassword.value =
-    transferAmount.value =
-    transferTo.value =
-    inputAccountUser.value =
-    inputAccountPassword.value =
-      '';
+  const inputs = [
+    inputUserName,
+    inputPassword,
+    transferAmount,
+    transferTo,
+    loanAmount,
+    inputAccountUser,
+    inputAccountPassword,
+  ];
+
+  inputs.forEach((input) => {
+    input.value = '';
+    input.blur();
+  });
 }
 
 export default clearFields;

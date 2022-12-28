@@ -6,6 +6,7 @@ import { acc1, acc2, acc3, acc4 } from './data.js';
 import getUserName from './getInitials.js';
 import transferFunds from './transferFunds.js';
 import deleteAccount from './deleteAccount.js';
+import requestLoan from './requestLoan.js';
 
 let currentUser;
 
@@ -45,4 +46,10 @@ closeAccountBtn.addEventListener('click', (e) => {
   deleteAccount(currentUser, accounts);
 });
 
+// ? Request loan (Not greater than 10000)
+const loanBtn = document.querySelector('.request-loan-btn');
 
+loanBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  requestLoan(currentUser)
+});

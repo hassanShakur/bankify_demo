@@ -5,7 +5,7 @@ import showNotification from './showNotification.js';
 const loanAmount = get('.request-loan-amount');
 
 const requestLoan = (currentUser) => {
-  const amount = +loanAmount.value;
+  const amount = Math.floor(loanAmount.value);
 
   if (amount > 10000) {
     showNotification('error', 'Loan must be less than 10000£!');
@@ -17,7 +17,10 @@ const requestLoan = (currentUser) => {
     return;
   }
 
-  showNotification('success', `loan deposit of ${amount}£ granted successfully`);
+  showNotification(
+    'success',
+    `loan deposit of ${amount}£ granted successfully`
+  );
   currentUser.transactions.push(amount);
   updateUI(currentUser);
   clearFields();

@@ -15,8 +15,6 @@ const getTotals = (acc) => {
     .map((deposit) => deposit * (acc.interestRate / 100))
     .reduce((acc, int) => acc + int, 0);
 
-  interest = +interest.toFixed(2);
-
   const balance = acc.transactions.reduce((acc, cur) => {
     if (cur > 0) {
       ins += cur;
@@ -28,10 +26,10 @@ const getTotals = (acc) => {
 
   acc.balance = balance;
 
-  balanceLabel.textContent = `${balance}£`;
-  insLabel.textContent = `${ins}£`;
-  outsLabel.textContent = `${Math.abs(outs)}£`;
-  interestLabel.textContent = `${interest}£`;
+  balanceLabel.textContent = `${balance.toFixed(2)}£`;
+  insLabel.textContent = `${ins.toFixed(2)}£`;
+  outsLabel.textContent = `${Math.abs(outs).toFixed(2)}£`;
+  interestLabel.textContent = `${interest.toFixed(2)}£`;
 };
 
 export default getTotals;

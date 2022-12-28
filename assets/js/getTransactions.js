@@ -14,7 +14,7 @@ const getTransactions = (transaction) => {
             ${transType}
           </div>
           <div class="transaction-date">23/2/2020</div>
-          <div class="transaction-amount">${trans}£</div>
+          <div class="transaction-amount">${trans.toFixed(2)}£</div>
         </div>
         <!-- End single transaction -->`;
     })

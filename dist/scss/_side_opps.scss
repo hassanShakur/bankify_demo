@@ -10,6 +10,10 @@
     padding: 5vw 6vw 8vw 6vw;
     border-radius: 2.4vw;
 
+    h3 {
+      font-size: 3.8vw;
+    }
+
     form {
       @include flexCenter(column);
       align-items: flex-start;
@@ -18,6 +22,10 @@
         @include flexCenter(column);
         align-items: flex-start;
         padding-bottom: 1rem;
+
+        label {
+          font-size: 2.4vw;
+        }
       }
 
       input {

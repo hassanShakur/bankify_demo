@@ -6,10 +6,12 @@
   margin: 0 auto;
   height: fit-content;
   transform: scale(0%);
+  height: 0;
   opacity: 0;
 
   &.logged-in {
     transform: unset;
+    height: unset;
     opacity: 1;
   }
 

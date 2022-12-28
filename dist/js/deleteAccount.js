@@ -8,7 +8,7 @@ const inputPassword = get('.close-acc-password');
 
 const deleteAccount = (activeUser, accounts) => {
   const password = Number(inputPassword.value);
-  const name = inputUserName.value;
+  const name = inputUserName.value.toLowerCase();
 
   if (password !== activeUser.pass || name !== activeUser.userName) {
     showNotification('error', 'wrong username or password!');

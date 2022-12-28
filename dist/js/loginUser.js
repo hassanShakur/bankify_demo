@@ -14,7 +14,8 @@ const greetings = get('.greetings');
 
 const loginUser = (accounts) => {
   const password = Number(inputPassword.value);
-  const name = inputUserName.value;
+  const name = inputUserName.value.toLowerCase();
+  
   activeUser = accounts.find((account) => account.userName === name);
   if (activeUser?.pass === password) {
     mainSection.classList.add('logged-in');

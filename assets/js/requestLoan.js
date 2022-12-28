@@ -17,10 +17,10 @@ const requestLoan = (currentUser) => {
     return;
   }
 
+  showNotification('success', `loan deposit of ${amount}£ granted successfully`);
   currentUser.transactions.push(amount);
   updateUI(currentUser);
   clearFields();
-  showNotification('error', `deposit of ${amount} successful`);
 };
 
 export default requestLoan;

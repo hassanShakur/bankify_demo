@@ -21,6 +21,8 @@ const loginUser = (accounts) => {
     mainSection.classList.add('logged-in');
     loginContainer.classList.add('hide-login');
 
+    showNotification('success', `welcome back, ${activeUser.owner}!`);
+
     // * Update UI
     updateUI(activeUser);
 

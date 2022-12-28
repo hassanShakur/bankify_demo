@@ -33,7 +33,10 @@ const transferFunds = (currentUser, accounts) => {
   // If no errors
   currentUser.transactions.push(-amount);
   receiverAcc.transactions.push(amount);
-  showNotification('success', `transfer to ${receiverAcc.owner} successful!`);
+  showNotification(
+    'success',
+    `transfer of ${amount}£ to ${receiverAcc.owner} successful!`
+  );
 
   // ! Reset transfer inputs
   clearFields();

@@ -1,5 +1,6 @@
 import get from './getElement.js';
 import updateUI from './updateUI.js';
+import clearFields from './clearFields.js';
 import showNotification from './showNotification.js';
 
 let activeUser;
@@ -27,7 +28,7 @@ const loginUser = (accounts) => {
           ><span class="name">${activeUser.owner.split(' ')[0]}</span>`;
 
     // ! Reset login inputs
-    inputPassword.value = inputUserName.value = '';
+    clearFields();
     inputPassword.blur();
   } else {
     showNotification('error', 'wrong username or password!');

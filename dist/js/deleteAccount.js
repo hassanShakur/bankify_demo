@@ -1,5 +1,6 @@
 import get from './getElement.js';
 import logoutUser from './logoutUser.js';
+import clearFields from './clearFields.js';
 import showNotification from './showNotification.js';
 
 const inputUserName = get('.close-acc-user');
@@ -22,7 +23,7 @@ const deleteAccount = (activeUser, accounts) => {
   logoutUser();
   showNotification('error', 'Account closed! Regards.');
 
-  inputPassword.value = inputUserName.value = '';
+  clearFields();
 };
 
 export default deleteAccount;

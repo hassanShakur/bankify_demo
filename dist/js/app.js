@@ -2,7 +2,7 @@ import get from './getElement.js';
 import updateUI from './updateUI.js';
 import loginUser from './loginUser.js';
 import logoutUser from './logoutUser.js';
-import { acc1, acc2, acc3 } from './data.js';
+import { acc1, acc2, acc3, acc4 } from './data.js';
 import getUserName from './getInitials.js';
 import transferFunds from './transferFunds.js';
 import deleteAccount from './deleteAccount.js';
@@ -10,7 +10,7 @@ import deleteAccount from './deleteAccount.js';
 let currentUser;
 
 // * Get name initials from accounts
-const accounts = [acc1, acc2, acc3];
+const accounts = [acc1, acc2, acc3, acc4];
 getUserName(accounts);
 
 // ? Validate login credentials and display information
@@ -44,3 +44,5 @@ closeAccountBtn.addEventListener('click', (e) => {
   e.preventDefault();
   deleteAccount(currentUser, accounts);
 });
+
+

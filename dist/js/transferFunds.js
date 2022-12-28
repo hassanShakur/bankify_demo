@@ -1,5 +1,6 @@
 import get from './getElement.js';
 import showNotification from './showNotification.js';
+import clearFields from './clearFields.js';
 
 const transferAmount = get('.transfer-amount');
 const transferTo = get('.transfer-to');
@@ -34,7 +35,7 @@ const transferFunds = (currentUser, accounts) => {
   showNotification('success', `transfer to ${receiverAcc.owner} successful!`);
 
   // ! Reset transfer inputs
-  transferAmount.value = transferTo.value = '';
+  clearFields();
   transferTo.blur();
 };
 

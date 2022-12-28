@@ -3,7 +3,6 @@ footer {
   left: 0;
   bottom: 0;
   @include flexCenter(column);
-  margin: 0.2rem auto;
   justify-content: center;
 
   a {
@@ -20,6 +19,19 @@ footer {
     &:link,
     &:active {
       color: unset;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  footer {
+    left: 10vw;
+    a {
+      margin: 1rem;
+
+      img {
+        width: 2rem;
+      }
     }
   }
 }

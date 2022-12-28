@@ -80,6 +80,10 @@
     height: 730px;
     padding: 0 6rem;
 
+    &.logged-in {
+      height: 730px;
+    }
+
     .transactions {
       grid-column: 1 / 5;
       grid-row: 2 / 5;

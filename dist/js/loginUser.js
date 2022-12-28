@@ -1,5 +1,6 @@
 import get from './getElement.js';
 import updateUI from './updateUI.js';
+import showNotification from './showNotification.js';
 
 let activeUser;
 
@@ -34,15 +35,5 @@ const loginUser = (accounts) => {
 
   return activeUser;
 };
-
-function showNotification(type, message) {
-  const notifier = document.querySelector('.notification');
-  notifier.textContent = message;
-  notifier.style.backgroundColor = type === 'error' ? 'red' : 'green';
-  notifier.classList.add('show-notification');
-  setTimeout(() => {
-    notifier.classList.remove('show-notification');
-  }, 1400);
-}
 
 export default loginUser;

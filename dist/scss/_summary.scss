@@ -2,10 +2,11 @@
   background: $background;
   padding: 2vw;
   margin: 2vw auto;
-  margin-top: -8vw;
+  margin-top: 1vw;
   width: 85%;
   @include flexCenter(row);
   border-radius: 1vw;
+  grid-row: 3;
   box-shadow: 6px 6px 4px -2px lighten($background, 10%);
 
   div {

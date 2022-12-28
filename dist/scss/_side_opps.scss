@@ -1,5 +1,5 @@
 .side-operations {
-  width: 90vw;
+  width: 80vw;
   margin: 4vw auto;
   color: darken($text-color, 100%);
 
@@ -7,7 +7,7 @@
     height: fit-content;
     margin: 4vh 4vw;
     background: blue;
-    padding: 5vw 6vw 8vw 6vw;
+    padding: 3vw 4vw 3vw 4vw;
     border-radius: 2.4vw;
 
     h3 {
@@ -35,7 +35,7 @@
       button {
         background: transparent;
         border: none;
-        padding: 1.2vw 1.8vw;
+        padding: 1.4vw 2vw;
         border-radius: 1vw;
         align-self: flex-end;
 
@@ -119,8 +119,10 @@
         @include flexCenter(row);
         align-items: center;
 
-        label {
-          font-size: 0.8rem;
+        div {
+          label {
+            font-size: 0.8rem;
+          }
         }
 
         input {
@@ -128,7 +130,7 @@
         }
 
         button {
-          padding: 1rem;
+          padding: 0.6rem;
           border-radius: 0.2rem;
           margin-top: -1rem;
           margin-left: 3rem;

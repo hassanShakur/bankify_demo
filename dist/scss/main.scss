@@ -4,6 +4,7 @@
 @import './transactions';
 @import './side_opps';
 @import './summary';
+@import './notification';
 
 body {
   background-color: $background;
@@ -41,7 +42,7 @@ input {
     padding: 0.4rem;
     border-radius: 0.2rem;
     margin-top: 1rem;
-    margin-right: .4rem;
+    margin-right: 0.4rem;
     width: 6rem;
   }
 }

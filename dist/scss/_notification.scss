@@ -1,0 +1,23 @@
+.notif-container {
+  position: fixed;
+  top: 10vh;
+  left: 20vw;
+  width: 60vw;
+  padding: 0.4rem;
+  text-align: center;
+  background: transparent;
+  @include flexCenter(column);
+
+  .notification {
+    background: red;
+    width: fit-content;
+    padding: 0.6vw 1.4vw;
+    font-size: 2.4vw;
+    border-radius: 1vw;
+    transform: scale(0%);
+
+    &.show-notification {
+      transform: unset;
+    }
+  }
+}

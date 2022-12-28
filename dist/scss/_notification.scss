@@ -7,7 +7,6 @@
   text-align: center;
   background: transparent;
   @include flexCenter(column);
-  z-index: -10;
 
   .notification {
     background: red;
@@ -31,6 +30,7 @@
     width: 500px;
     left: unset;
     top: 1rem;
+    z-index: -10;
     margin: 0.6rem auto;
 
     .notification {

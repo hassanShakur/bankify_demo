@@ -7,6 +7,8 @@ import getUserName from './getInitials.js';
 import transferFunds from './transferFunds.js';
 import deleteAccount from './deleteAccount.js';
 import requestLoan from './requestLoan.js';
+import getTransactions from './getTransactions.js';
+import sortTransactions from './sortTransactions.js';
 
 let currentUser;
 
@@ -51,5 +53,13 @@ const loanBtn = document.querySelector('.request-loan-btn');
 
 loanBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  requestLoan(currentUser)
+  requestLoan(currentUser);
+});
+
+// ? Sort transactions
+
+const sortBtn = get('.sort');
+
+sortBtn.addEventListener('click', () => {
+  sortTransactions(currentUser.transactions);
 });

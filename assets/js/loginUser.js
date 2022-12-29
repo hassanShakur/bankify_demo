@@ -2,6 +2,7 @@ import get from './getElement.js';
 import updateUI from './updateUI.js';
 import clearFields from './clearFields.js';
 import showNotification from './showNotification.js';
+import getTimeDate from './getTimeDate.js';
 
 let activeUser;
 
@@ -23,12 +24,13 @@ const loginUser = (accounts) => {
 
     showNotification('success', `welcome back, ${activeUser.owner}!`);
 
+    // ? Greet user
+    const { greetTime } = getTimeDate();
+    greetings.innerHTML = `good <span class="greet-time">${greetTime}</span
+          ><span class="name">, ${activeUser.owner.split(' ')[0]}</span>`;
+
     // * Update UI
     updateUI(activeUser);
-
-    // ? Greet user
-    greetings.innerHTML = `good <span class="greet-time">afternoon, </span
-          ><span class="name">${activeUser.owner.split(' ')[0]}</span>`;
 
     // ! Reset login inputs
     clearFields();

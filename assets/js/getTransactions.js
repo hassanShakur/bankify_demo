@@ -1,11 +1,16 @@
 import get from './getElement.js';
+import getTimeDate from './getTimeDate.js';
 
 const transactionsCont = get('.transactions');
 
-const getTransactions = (transaction) => {
-  let transHtml = transaction
+const getTransactions = (currentUser) => {
+  let transHtml = currentUser.transactions
     .map((trans, index) => {
       const transType = trans > 0 ? 'deposit' : 'withdrawal';
+
+      const { year, month, dayDate } = getTimeDate(
+        new Date(currentUser.transactionDate[index])
+      );
 
       return `<!-- Single transaction -->
         <div class="transaction">
@@ -13,7 +18,7 @@ const getTransactions = (transaction) => {
             <span class="trans-index">${index + 1}</span>
             ${transType}
           </div>
-          <div class="transaction-date">23/2/2020</div>
+          <div class="transaction-date">${dayDate}/${month}/${year}</div>
           <div class="transaction-amount">${trans.toFixed(2)}£</div>
         </div>
         <!-- End single transaction -->`;

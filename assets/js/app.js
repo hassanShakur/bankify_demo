@@ -60,5 +60,5 @@ loanBtn.addEventListener('click', (e) => {
 const sortBtn = get('.sort');
 
 sortBtn.addEventListener('click', () => {
-  sortTransactions(currentUser.transactions);
+  sortTransactions(currentUser);
 });

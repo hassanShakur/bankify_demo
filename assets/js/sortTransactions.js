@@ -2,7 +2,8 @@ import getTransactions from './getTransactions.js';
 
 let control = -1;
 
-const sortTransactions = (transactions) => {
+const sortTransactions = (activeUser) => {
+  const transactions = activeUser.transactions;
   let copyTrans = transactions.slice();
   control++;
   if (control > 2) control = 0;

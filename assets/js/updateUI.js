@@ -5,7 +5,7 @@ import getTimeDate from './getTimeDate.js';
 
 const updateUI = (activeUser) => {
   // ? Populate the transactions
-  getTrans(activeUser.transactions);
+  getTrans(activeUser);
 
   // ! Get Balance, Ins and outs
   getTotals(activeUser);
@@ -14,7 +14,7 @@ const updateUI = (activeUser) => {
   clearFields();
 
   // Set time and date
-  getTimeDate();
+  getTimeDate(new Date());
 };
 
 export default updateUI;

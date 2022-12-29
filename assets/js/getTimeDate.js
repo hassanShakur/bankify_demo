@@ -4,14 +4,13 @@ const dateLabel = get('.date');
 // const greetTime = get('greet-time');
 // const { year, month, dayDate, hour, minutes, seconds } = getTimeDate();
 
-function getTimeDate() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = `${now.getMonth() + 1}`.padStart(2, 0);
-  const dayDate = `${now.getDate()}`.padStart(2, 0);
-  const hour = `${now.getHours()}`.padStart(2, 0);
-  const minutes = `${now.getMinutes()}`.padStart(2, 0);
-  const seconds = `${now.getSeconds()}`.padStart(2, 0);
+function getTimeDate(time) {
+  const year = time.getFullYear();
+  const month = `${time.getMonth() + 1}`.padStart(2, 0);
+  const dayDate = `${time.getDate()}`.padStart(2, 0);
+  const hour = `${time.getHours()}`.padStart(2, 0);
+  const minutes = `${time.getMinutes()}`.padStart(2, 0);
+  const seconds = `${time.getSeconds()}`.padStart(2, 0);
 
   let greetTime;
 

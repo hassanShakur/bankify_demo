@@ -3,14 +3,22 @@ import getTimeDate from './getTimeDate.js';
 
 const transactionsCont = get('.transactions');
 
-const getTransactions = (currentUser) => {
-  let transHtml = currentUser.transactions
+const getTransactions = (currentUser, copyTrans = '') => {
+  const transactions = copyTrans
+    ? currentUser.copyTransactions
+    : currentUser.transactions;
+  let transHtml = transactions
     .map((trans, index) => {
       const transType = trans > 0 ? 'deposit' : 'withdrawal';
 
-      const { year, month, dayDate } = getTimeDate(
+      let { year, month, dayDate, daysPassed } = getTimeDate(
         new Date(currentUser.transactionDate[index])
       );
+
+      const transactionDate =
+        typeof daysPassed !== 'object'
+          ? daysPassed
+          : `${dayDate}/${month}/${year}`;
 
       return `<!-- Single transaction -->
         <div class="transaction">
@@ -18,7 +26,7 @@ const getTransactions = (currentUser) => {
             <span class="trans-index">${index + 1}</span>
             ${transType}
           </div>
-          <div class="transaction-date">${dayDate}/${month}/${year}</div>
+          <div class="transaction-date">${transactionDate}</div>
           <div class="transaction-amount">${trans.toFixed(2)}£</div>
         </div>
         <!-- End single transaction -->`;

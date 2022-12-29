@@ -1,8 +1,7 @@
 import get from './getElement.js';
+import calcDaysPassed from './calcDaysPast.js';
 
 const dateLabel = get('.date');
-// const greetTime = get('greet-time');
-// const { year, month, dayDate, hour, minutes, seconds } = getTimeDate();
 
 function getTimeDate(time) {
   const year = time.getFullYear();
@@ -22,10 +21,12 @@ function getTimeDate(time) {
     greetTime = 'morning';
   }
 
+  const daysPassed = calcDaysPassed(+new Date(time));
+
   // Set current time and date
   dateLabel.textContent = `${year}/${month}/${dayDate}, ${hour}:${minutes}:${seconds}`;
 
-  return { year, month, dayDate, hour, minutes, seconds, greetTime };
+  return { year, month, dayDate, hour, minutes, seconds, greetTime,  daysPassed};
 }
 
 export default getTimeDate;

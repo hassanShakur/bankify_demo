@@ -1,5 +1,6 @@
 import get from './getElement.js';
 import showNotification from './showNotification.js';
+import getTransactions from './getTransactions.js';
 import clearFields from './clearFields.js';
 
 const transferAmount = get('.transfer-amount');
@@ -32,7 +33,11 @@ const transferFunds = (currentUser, accounts) => {
 
   // If no errors
   currentUser.transactions.push(-amount);
+  currentUser.transactionDate.push(new Date());
   receiverAcc.transactions.push(amount);
+  receiverAcc.transactionDate.push(new Date());
+  getTransactions(currentUser);
+
   showNotification(
     'success',
     `transfer of ${amount}£ to ${receiverAcc.owner} successful!`

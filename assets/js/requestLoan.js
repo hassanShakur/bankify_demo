@@ -17,13 +17,15 @@ const requestLoan = (currentUser) => {
     return;
   }
 
-  showNotification(
-    'success',
-    `loan deposit of ${amount}£ granted successfully`
-  );
-  currentUser.transactions.push(amount);
-  updateUI(currentUser);
-  clearFields();
+  setTimeout(() => {
+    currentUser.transactions.push(amount);
+    currentUser.transactionDate.push(new Date());
+
+    updateUI(currentUser);
+    clearFields();
+  }, 3200);
+
+  showNotification('success', `processing... this might take a minute...`);
 };
 
 export default requestLoan;

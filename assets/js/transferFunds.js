@@ -15,7 +15,7 @@ const transferFunds = (currentUser, accounts) => {
   );
 
   if (!receiverAcc) {
-    showNotification('error', 'please enter receiving account!');
+    showNotification('error', 'please recheck receiving account!');
     return;
   }
   if (currentUser.userName === receiverAcc.userName) {

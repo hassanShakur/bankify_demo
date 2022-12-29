@@ -24,7 +24,7 @@ nav {
 
   .login {
     max-width: 600px;
-    background: rgba(32, 141, 171, 0.474);
+    background: rgba(77, 77, 77, 0.474);
     margin-top: 10vh;
     margin: 14vh auto;
     height: fit-content;
@@ -40,11 +40,12 @@ nav {
     }
 
     input {
-      background: rgb(161, 234, 254);
+      background: rgba(88, 88, 88, 0.452);
+      color: white;
     }
 
     button {
-      background: rgb(16, 155, 67);
+      background: rgb(23, 128, 62);
       color: $text-color;
       padding: 1.6vw 3.3vw;
       text-transform: capitalize;
@@ -53,7 +54,7 @@ nav {
       border: 1.2px solid transparent;
 
       &:hover {
-        background: rgb(11, 125, 53);
+        background: rgb(22, 72, 40);
         cursor: pointer;
       }
     }

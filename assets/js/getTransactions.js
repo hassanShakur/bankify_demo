@@ -1,5 +1,6 @@
 import get from './getElement.js';
 import getTimeDate from './getTimeDate.js';
+import internationalize from './numInternationalizing.js';
 
 const transactionsCont = get('.transactions');
 
@@ -27,7 +28,7 @@ const getTransactions = (currentUser, copyTrans = '') => {
             ${transType}
           </div>
           <div class="transaction-date">${transactionDate}</div>
-          <div class="transaction-amount">${trans.toFixed(2)}£</div>
+          <div class="transaction-amount">${internationalize(trans)}</div>
         </div>
         <!-- End single transaction -->`;
     })

@@ -14,7 +14,7 @@ function getTimeDate(time) {
   let greetTime;
 
   if (hour < 3 && hour > 19) {
-    greetTime = 'evining';
+    greetTime = 'evening';
   } else if (hour > 12) {
     greetTime = 'afternoon';
   } else {
@@ -24,7 +24,7 @@ function getTimeDate(time) {
   const daysPassed = calcDaysPassed(+new Date(time));
 
   // Set current time and date
-  dateLabel.textContent = `${year}/${month}/${dayDate}, ${hour}:${minutes}:${seconds}`;
+  dateLabel.textContent = `${dayDate}/${month}/${year}, ${hour}:${minutes}:${seconds}`;
 
   return { year, month, dayDate, hour, minutes, seconds, greetTime,  daysPassed};
 }

@@ -4,6 +4,7 @@ const balanceLabel = get('.balance');
 const insLabel = get('.in-amount');
 const outsLabel = get('.out-amount');
 const interestLabel = get('.interest-amount');
+import internationalize from './numInternationalizing.js';
 
 const getTotals = (acc) => {
   let ins = 0;
@@ -26,10 +27,10 @@ const getTotals = (acc) => {
 
   acc.balance = balance;
 
-  balanceLabel.textContent = `${balance.toFixed(2)}£`;
-  insLabel.textContent = `${ins.toFixed(2)}£`;
-  outsLabel.textContent = `${Math.abs(outs).toFixed(2)}£`;
-  interestLabel.textContent = `${interest.toFixed(2)}£`;
+  balanceLabel.textContent = internationalize(balance);
+  insLabel.textContent = internationalize(ins);
+  outsLabel.textContent = internationalize(outs).slice(1);
+  interestLabel.textContent = internationalize(interest);
 };
 
 export default getTotals;

@@ -1,10 +1,10 @@
 import get from './getElement.js';
-import logoutUser from './logoutUser.js';
 import clearFields from './clearFields.js';
 import showNotification from './showNotification.js';
 
 const inputUserName = get('.close-acc-user');
 const inputPassword = get('.close-acc-password');
+const logoutBtn = get('.logout');
 
 const deleteAccount = (activeUser, accounts) => {
   const password = +inputPassword.value;
@@ -19,8 +19,8 @@ const deleteAccount = (activeUser, accounts) => {
   const index = accounts.findIndex(
     (acc) => acc.userName === activeUser.userName
   );
+  logoutBtn.click();
   accounts.splice(index, 1);
-  logoutUser();
   showNotification('error', 'Account closed! Regards.');
 
   clearFields();

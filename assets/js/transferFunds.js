@@ -2,6 +2,7 @@ import get from './getElement.js';
 import showNotification from './showNotification.js';
 import getTransactions from './getTransactions.js';
 import clearFields from './clearFields.js';
+import startLogoutTimer from './logoutTimer.js';
 
 const transferAmount = get('.transfer-amount');
 const transferTo = get('.transfer-to');
@@ -42,6 +43,9 @@ const transferFunds = (currentUser, accounts) => {
     'success',
     `transfer of ${amount}£ to ${receiverAcc.owner} successful!`
   );
+
+  // * Restart logout timer
+  startLogoutTimer(1);
 
   // ! Reset transfer inputs
   clearFields();

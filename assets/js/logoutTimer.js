@@ -6,8 +6,10 @@ const logoutBtn = get('.logout');
 
 let time = 300;
 
-function startLogoutTimer() {
-  const tick = () => {
+function startLogoutTimer(indicator = null) {
+  const timer = setInterval(tick, 1000);
+
+  function tick() {
     logoutBtn.addEventListener('click', () => {
       clearInterval(timer);
       time = 300;
@@ -21,11 +23,16 @@ function startLogoutTimer() {
       clearInterval(timer);
       logoutBtn.click();
     }
-    time--;
-  };
+    if (indicator === 1) {
+      clearInterval(timer);
+      time = 300;
+      indicator = null;
+    } else {
+      time--;
+    }
+  }
 
   tick();
-  const timer = setInterval(tick, 1000);
 }
 
 export default startLogoutTimer;

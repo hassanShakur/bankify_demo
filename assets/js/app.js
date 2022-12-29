@@ -22,6 +22,8 @@ loginBtn.addEventListener('click', (e) => {
 
   // Login user and get user details
   currentUser = loginUser(accounts);
+
+  
 });
 
 // * Handle funds transfer
@@ -62,3 +64,6 @@ const sortBtn = get('.sort');
 sortBtn.addEventListener('click', () => {
   sortTransactions(currentUser);
 });
+
+
+

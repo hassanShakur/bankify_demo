@@ -93,6 +93,12 @@
       background: #e52a5a;
     }
   }
+
+  .logout-timer {
+    color: white;
+    width: 76vw;
+    text-align: right;
+  }
 }
 
 @media (min-width: 720px) {
@@ -103,7 +109,7 @@
     margin: 0.4rem auto;
     transform: translateY(2rem);
 
-    article {
+    article, .logout-timer {
       height: fit-content;
       width: unset;
       margin: 0 0.4rem;

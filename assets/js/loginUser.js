@@ -3,6 +3,7 @@ import updateUI from './updateUI.js';
 import clearFields from './clearFields.js';
 import showNotification from './showNotification.js';
 import getTimeDate from './getTimeDate.js';
+import startLogoutTimer from './logoutTimer.js';
 
 let activeUser;
 
@@ -21,6 +22,7 @@ const loginUser = (accounts) => {
   if (activeUser?.pass === password) {
     mainSection.classList.add('logged-in');
     loginContainer.classList.add('hide-login');
+    startLogoutTimer();
 
     showNotification('success', `welcome back, ${activeUser.owner}!`);
 

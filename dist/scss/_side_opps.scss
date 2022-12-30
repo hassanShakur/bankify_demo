@@ -109,7 +109,8 @@
     margin: 0.4rem auto;
     transform: translateY(2rem);
 
-    article, .logout-timer {
+    article,
+    .logout-timer {
       height: fit-content;
       width: unset;
       margin: 0 0.4rem;
@@ -157,6 +158,10 @@
           display: block;
         }
       }
+    }
+
+    .logout-timer {
+      margin-top: 2rem;
     }
   }
 }

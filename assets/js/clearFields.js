@@ -9,7 +9,7 @@ const inputAccountUser = get('.close-acc-user');
 const inputAccountPassword = get('.close-acc-password');
 const loanAmount = get('.request-loan-amount');
 
-function clearFields() {
+const clearFields = () => {
   const inputs = [
     inputUserName,
     inputPassword,
@@ -24,6 +24,6 @@ function clearFields() {
     input.value = '';
     input.blur();
   });
-}
+};
 
 export default clearFields;

@@ -3,7 +3,7 @@ import calcDaysPassed from './calcDaysPast.js';
 
 const dateLabel = get('.date');
 
-function getTimeDate(time) {
+const getTimeDate = (time) => {
   const year = time.getFullYear();
   const month = `${time.getMonth() + 1}`.padStart(2, 0);
   const dayDate = `${time.getDate()}`.padStart(2, 0);
@@ -26,7 +26,16 @@ function getTimeDate(time) {
   // Set current time and date
   dateLabel.textContent = `${dayDate}/${month}/${year}, ${hour}:${minutes}:${seconds}`;
 
-  return { year, month, dayDate, hour, minutes, seconds, greetTime,  daysPassed};
-}
+  return {
+    year,
+    month,
+    dayDate,
+    hour,
+    minutes,
+    seconds,
+    greetTime,
+    daysPassed,
+  };
+};
 
 export default getTimeDate;

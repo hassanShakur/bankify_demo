@@ -16,19 +16,19 @@ const transferFunds = (currentUser, accounts) => {
   );
 
   if (!receiverAcc) {
-    showNotification('error', 'please recheck receiving account!');
+    showNotification('danger', 'please recheck receiving account!');
     return;
   }
   if (currentUser.userName === receiverAcc.userName) {
-    showNotification('error', 'you cannot transfer funds to self!');
+    showNotification('danger', 'you cannot transfer funds to self!');
     return;
   }
   if (amount <= 0) {
-    showNotification('error', 'please check amount!');
+    showNotification('danger', 'please check amount!');
     return;
   }
   if (currentUser.balance < amount) {
-    showNotification('error', 'insufficient funds!');
+    showNotification('danger', 'insufficient funds!');
     return;
   }
 

@@ -11,7 +11,7 @@ const deleteAccount = (activeUser, accounts) => {
   const name = inputUserName.value.toLowerCase();
 
   if (password !== activeUser.pass || name !== activeUser.userName) {
-    showNotification('error', 'wrong username or password!');
+    showNotification('danger', 'wrong username or password!');
     return;
   }
 
@@ -21,7 +21,7 @@ const deleteAccount = (activeUser, accounts) => {
   );
   logoutBtn.click();
   accounts.splice(index, 1);
-  showNotification('error', 'Account closed! Regards.');
+  showNotification('danger', 'Account closed! Regards.');
 
   clearFields();
 };

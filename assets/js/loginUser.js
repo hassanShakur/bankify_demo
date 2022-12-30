@@ -38,7 +38,7 @@ const loginUser = (accounts) => {
     clearFields();
     inputPassword.blur();
   } else {
-    showNotification('error', 'wrong username or password!');
+    showNotification('danger', 'wrong username or password!');
   }
 
   return activeUser;

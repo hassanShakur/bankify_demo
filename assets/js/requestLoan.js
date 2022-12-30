@@ -10,12 +10,12 @@ const requestLoan = (currentUser) => {
   const amount = Math.floor(loanAmount.value);
 
   if (amount > 10000) {
-    showNotification('error', 'Loan must be less than 10000£!');
+    showNotification('danger', 'Loan must be less than 10000£!');
     return;
   }
 
   if (amount < 0 || !amount) {
-    showNotification('error', 'please enter valid amount!');
+    showNotification('danger', 'please enter valid amount!');
     return;
   }
 

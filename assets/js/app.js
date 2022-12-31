@@ -15,6 +15,10 @@ let currentUser;
 const accounts = [acc1, acc2, acc3, acc4];
 getUserName(accounts);
 
+// * Focus on username input
+const inputUserName = get('.user-name');
+inputUserName.focus();
+
 // ? Validate login credentials and display information
 const loginBtn = get('.login-btn');
 loginBtn.addEventListener('click', (e) => {
@@ -22,8 +26,6 @@ loginBtn.addEventListener('click', (e) => {
 
   // Login user and get user details
   currentUser = loginUser(accounts);
-
-  
 });
 
 // * Handle funds transfer
@@ -64,6 +66,3 @@ const sortBtn = get('.sort');
 sortBtn.addEventListener('click', () => {
   sortTransactions(currentUser);
 });
-
-
-

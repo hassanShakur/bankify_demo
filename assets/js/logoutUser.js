@@ -15,6 +15,10 @@ const logoutUser = () => {
   clearFields();
 
   showNotification('success', `fare thee well 😊`);
+
+  // * Focus on username input
+  const inputUserName = get('.user-name');
+  inputUserName.focus();
 };
 
 export default logoutUser;

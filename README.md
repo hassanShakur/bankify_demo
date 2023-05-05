@@ -2,6 +2,10 @@
 
 A simple project generalizing basing JavaScript concepts combined to one.
 
+### Deployment
+
+- [Website preview](https://hassanshakur.github.io/bankify_demo/)
+
 ![Sample Bankifier Screenshot](assets/images/screenshot.png)
 
 ### Process
